@@ -19,6 +19,7 @@ jobs:
           git clone https://github.com/lifeishard4me/Actions.git ~/Actions
       - name: '打印互助码 & 互助码自动上车'
         run: |
+          ll
           cd  ~/scripts
           chmod +x jd_sharecodes.sh
           ./jd_sharecodes.sh
