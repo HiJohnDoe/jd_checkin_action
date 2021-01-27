@@ -19,6 +19,10 @@ jobs:
       - name: 签入仓库
         uses: actions/checkout@v2
         
+      - name: 进入 Loon-main 文件夹
+        run: | #
+          cd Scripts/Loon-main
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -30,11 +34,10 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: node_modules
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
       
       - name: 运行 shelocks 脚本
         run: | #
-          cd Scripts/Loon-main
           npm install 
           for js in jd_*.js; 
           do node $js || true
