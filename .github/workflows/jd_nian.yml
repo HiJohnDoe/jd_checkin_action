@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 */1 * * *' #此处为UTC-0时间
-  # watch:
-  #   types: started
+  watch:
+    types: started
   repository_dispatch:
     types: jd_nian
 jobs:
