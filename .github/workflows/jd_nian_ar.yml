@@ -37,6 +37,7 @@ jobs:
         run: |
           cd Scripts
           npm install
+          node jd_nian_sign.js
           node jd_nian_ar.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
