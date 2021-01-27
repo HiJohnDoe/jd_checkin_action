@@ -4,7 +4,6 @@
 name: jd_live直播
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '10-20/5 12 * * *'
