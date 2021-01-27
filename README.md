@@ -12,8 +12,7 @@
 ### 说明
 
 
-- 取消 `star` 触发，防止过于触发过于频繁，遭到封禁
-- `Github Secrets` 说明见[这里](https://gitlab.com/MrRight/Scripts/blob/master/githubAction.md)
+- `Github Secrets` 说明见[这里](https://raw.githubusercontent.com/HiJohnDoe/jd_actions/MrRight/githubAction.md)
 - jd_sharecode.yml 是来用获取账号下的互助码的，平时没什么作用，已改为手动触发
 
 
