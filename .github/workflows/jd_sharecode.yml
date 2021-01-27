@@ -19,14 +19,10 @@ jobs:
 
       - name: '打印互助码 & 互助码自动上车'
         run: |
-          cd function_scripts
+          cd Scripts
           chmod +x jd_sharecodes.sh
           ./jd_sharecodes.sh
           cd ..
-          
-      - name: Checkout
-        run: |
-          git clone -b master https://gitlab.com/MrRight/Scripts.git ~/scripts
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -43,7 +39,7 @@ jobs:
       
       - name: '运行 jd_get_share_code'
         run: |
-          cd  ~/scripts
+          cd Scripts
           npm install
           node jd_get_share_code.js
 
