@@ -4,7 +4,6 @@
 name: 东东萌宠&京东家庭号
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '35 */3 * * *'

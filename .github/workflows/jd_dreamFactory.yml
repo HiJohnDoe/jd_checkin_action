@@ -4,7 +4,6 @@
 name: jd_dreamFactory 京喜工厂&jx_cfd
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '15 * * * *'

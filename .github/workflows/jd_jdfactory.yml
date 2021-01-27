@@ -4,7 +4,6 @@
 name:  jd_jdfactory 东东工厂
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '10 0 * * *'

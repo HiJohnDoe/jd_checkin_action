@@ -4,7 +4,6 @@
 name: jd_plantBean 种豆得豆
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '0 */1 * * *' #此处为UTC-0时间

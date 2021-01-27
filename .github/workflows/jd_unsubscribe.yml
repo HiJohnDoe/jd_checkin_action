@@ -4,7 +4,6 @@
 name: jd_unsubscribe 京东取关商品
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '45 15 * * *'

@@ -4,7 +4,6 @@
 name: jd_speed 天天加速
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '33 */2 * * *'

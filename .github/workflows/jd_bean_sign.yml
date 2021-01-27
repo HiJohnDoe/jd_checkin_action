@@ -4,7 +4,6 @@
 name: 京豆签到类
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '30 15,0 * * *'

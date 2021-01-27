@@ -1,7 +1,6 @@
 name: jd_pigPet 京东金融养猪猪脚本
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '*/20 */1 * * *'

@@ -4,7 +4,6 @@
 name: jd_crazy_joy
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '0 */5 * * *'

@@ -4,7 +4,6 @@
 name: jd_rankingList 京东排行榜
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '11 18 * * *'

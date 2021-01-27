@@ -4,7 +4,6 @@
 name: jd_joy_reward 宠汪汪积分兑换京豆
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '0 */4 * * *'

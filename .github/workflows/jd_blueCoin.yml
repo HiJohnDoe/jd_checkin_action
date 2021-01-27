@@ -4,7 +4,6 @@
 name: jd_blueCoin 京小超兑换奖品
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '0 16 * * *'

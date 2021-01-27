@@ -4,7 +4,6 @@
 name: 东东农场&京喜农场
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '20 */4 * * *'

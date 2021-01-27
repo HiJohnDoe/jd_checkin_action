@@ -4,7 +4,6 @@
 name: 口袋书店
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '1 */4 * * *'

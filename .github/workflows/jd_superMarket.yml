@@ -4,7 +4,6 @@
 name: jd_superMarket 京小超
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '15 * * * *'
