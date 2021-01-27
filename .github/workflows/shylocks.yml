@@ -34,7 +34,7 @@ jobs:
       
       - name: 运行 shelocks 脚本
         run: | #
-          cd Scripts
+          cd Scripts/Loon-main
           npm install 
           for js in jd_*.js; 
           do node $js || true
