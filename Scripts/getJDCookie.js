@@ -59,7 +59,7 @@ function generateQrcode() {
           const setCookie = resp.headers['set-cookie'][0];
           okl_token = setCookie.substring(setCookie.indexOf("=") + 1, setCookie.indexOf(";"))
           const url = 'https://plogin.m.jd.com/cgi-bin/m/tmauth?appid=300&client_type=m&token=' + token;
-          qrcode.generate(url, {small: true}); // 输出二维码
+          qrcode.generate(url, {small: false}); // 输出二维码
           console.log("请打开 京东APP 扫码登录(二维码有效期为3分钟)");
         }
       } catch (e) {
