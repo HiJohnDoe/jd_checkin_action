@@ -35,6 +35,5 @@ jobs:
       
       - name: '运行 扫码获取京东cookie'
         run: |
-          cd Scripts
           npm install
           node getJDCookie.js
