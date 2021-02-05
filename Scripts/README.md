@@ -2,6 +2,7 @@
 查找下列代码，然后删除所在的语句，注意逻辑。
 > "undefined"!=typeof process&&JSON.stringify(process.env).indexOf("GITHUB")>-1&&process.exit(0);   
 > indexOf('GITHUB')
+> indexOf("GITHUB")
 
 2. 脚本文件夹中查找  
 > ./jdCookie   
