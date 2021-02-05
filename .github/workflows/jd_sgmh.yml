@@ -36,7 +36,7 @@ jobs:
         run: | 
           cd Scripts
           npm install
-          node hange.js.js
+          node jd_sgmh.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
