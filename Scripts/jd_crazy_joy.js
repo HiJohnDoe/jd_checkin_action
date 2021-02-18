@@ -30,7 +30,7 @@ const JD_API_HOST = 'https://api.m.jd.com/';
 const notify = $.isNode() ? require('../sendNotify') : '';
 let jdNotify = true;//是否关闭通知，false打开通知推送，true关闭通知推送
 let helpSelf = false // 循环助力，默认关闭
-let applyJdBean = 0; //疯狂的JOY京豆兑换，目前最小值为2000京豆，默认为 0 不开启京豆兑换
+let applyJdBean = 2000; //疯狂的JOY京豆兑换，目前最小值为2000京豆，默认为 0 不开启京豆兑换
 let cookiesArr = [], cookie = '', message = '';
 const inviteCodes = [
   'EdLPh8A6X5G1iWXu-uPYfA==@0gUO7F7N-4HVDh9mdQC2hg==@fUJTgR9z26fXdQgTvt_bgqt9zd5YaBeE@nCQQXQHKGjPCb7jkd8q2U-aCTjZMxL3s@2boGLV7TonMex8-nrT6EGat9zd5YaBeE@KTZmB4gV4zirfc3eWGgXhA==@dtTXFsCQ3tCWnXkLY8gyL6t9zd5YaBeE@-c4jG-fMiNon5YWAJsFHL6t9zd5YaBeE@hxG_ozzxvNjPuPCbly1WtA==',
@@ -622,21 +622,25 @@ function getSpecialJoy() {
             data = JSON.parse(data);
             if (data['resultCode'] === '0') {
               if (data.data) {
-                message += '五福汪情况:'
-                for (let item of data['data']) {
-                  if (item['joyId'] === 1003) {
-                    message += `多多JOY(${item['count']}只) `
-                  } else if (item['joyId'] === 1004) {
-                    message += `快乐JOY(${item['count']}只) `
-                  } else if (item['joyId'] === 1005) {
-                    message += `好物JOY(${item['count']}只) `
-                  } else if (item['joyId'] === 1006) {
-                    message += `省钱JOY(${item['count']}只) `
-                  } else if (item['joyId'] === 1007) {
-                    message += `东东JOY(${item['count']}只)`
-                  } else {
-                    message += `暂无`
+                message += '五福汪:'
+                if (data['data'] && data['data'].length > 0) {
+                  for (let item of data['data']) {
+                    if (item['joyId'] === 1003) {
+                      message += `多多JOY(${item['count']}只) `
+                    } else if (item['joyId'] === 1004) {
+                      message += `快乐JOY(${item['count']}只) `
+                    } else if (item['joyId'] === 1005) {
+                      message += `好物JOY(${item['count']}只) `
+                    } else if (item['joyId'] === 1006) {
+                      message += `省钱JOY(${item['count']}只) `
+                    } else if (item['joyId'] === 1007) {
+                      message += `东东JOY(${item['count']}只)`
+                    } else {
+                      message += `暂无`
+                    }
                   }
+                } else {
+                  message += `暂无`;
                 }
                 if (data['data'].length >= 5) {
                   $.msg($.name, '', `京东账号 ${$.index}${$.nickName}\n恭喜你,已集成五福汪可合成分红JOY了`)
