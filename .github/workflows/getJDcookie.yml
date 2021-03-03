@@ -5,10 +5,10 @@ name: getJDCookie 获取京豆cookie
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '2 23 * * *'
-  watch:
-    types: started
+  # schedule:
+  #   - cron: '2 23 * * *'
+  # watch:
+  #   types: started
   repository_dispatch:
     types: getJDCookie
 jobs:
